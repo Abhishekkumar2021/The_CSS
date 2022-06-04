@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color:rgba(0, 0, 0, 0.674);
+}
+.container{
+    padding:20px;
+    min-height:100vh;
+    /* width:100vw; */
+    background:rgba(0, 0, 255, 0.063);
+    display:flex;
+    gap:10px;
+    /* flex-direction: column-reverse; */
+    justify-content: center; /* main axis */
+    align-items: center; /* transverse axis */
+    align-content: center; /* to center the main axes if there are more than one*/
+    flex-wrap: wrap;
+
+}
+/* #btn_one{
+    background-color: rgb(243, 230, 230);
+}
+#btn_two{
+    background-color: rgb(77, 67, 67);
+} */
+
+button{
+    /* width:200px;
+    height:100px; */
+    /* padding:20px;
+    margin:20px; */
+    transition:0.2s ease all;
+    padding:15px 20px;
+    border:none;
+    border-radius: 25px;
+    box-shadow: 0px 10px 10px -3px rgba(0, 0, 0, 0.13);
+    background-color: rgb(85, 183, 239);
+    color:white;
+    /* animation: left_right 1s linear infinite; */
+    /* border: 10px double black; */
+}
+button:hover{
+    /* background-color:blue;
+    color:white; */
+    transform:scale(1.1);
+}
+button:active{
+    transform:scale(0.9);
+
+}
+
+@keyframes left_right{
+    0%{
+        transform:translateX(0) rotate(0);
+    }
+    25%{
+        transform:translateX(10px) rotate(10deg);
+    }
+    50%{
+        transform:translateX(0) rotate(0);
+    }
+    75%{
+        transform:translateX(-10px) rotate(-10deg);
+    }
+    100%{
+        transform:translateX(0px) rotate(0);
+    }
+}
+.card_container{
+    background:white;
+    padding:25px;
+    border-radius: 20px;
+    box-shadow:5px 5px 5px rgba(0, 0, 0, 0.12),
+                inset 5px 5px 5px rgba(0, 0, 0, 0.12);
+}
+
+.card{
+    position: relative;
+    /* flex-grow:1; */
+    /* display:flex;
+    justify-content: center;
+    align-items: center;
+    width:300px;
+    height:200px;
+    background:white;
+    box-shadow: 0px 20px 30px -10px rgba(0, 0, 0, 0.13);
+    border-radius: 20px; */
+    /* font-size:100px; */
+    height:500px;
+    background: rgba(233, 240, 244, 0.984);
+    width:400px;
+    border-radius: 20px;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.168);
+    transition:0.5s ease all;
+}
+.card:nth-child(3n){
+    background-color: lightgreen;
+}
+/* .card:nth-child(5n){
+    background-color: lightblue;
+} */
+/* .one{
+    background-color:lightblue;
+}
+.two{
+    background-color:lightgreen;
+} */
+
+p{
+    margin:20px 0;
+    margin-bottom: 40px;
+}
+h1{
+    position: absolute;
+    top:15px;
+    right:20px;
+    font-size:60px;
+    color:gray;
+}
+.card:hover{
+    transform:translateY(-60px);
+    background:linear-gradient(30deg,rgb(91, 213, 219),rgb(238, 145, 111));
+}
+.card:hover p,.card:hover h3{
+    color:white;
+
+    /* These styles are going to be applied on the p tag and h1 tag*/
+}
+.card:hover *{
+    color:white;
+    /* These styles are going to be applied on the p tag and h1 tag*/
+}
+.card:hover button{
+    background:rgb(243, 118, 197);
+}
